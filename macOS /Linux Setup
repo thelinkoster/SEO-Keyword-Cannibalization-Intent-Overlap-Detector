@@ -1,0 +1,5 @@
+git clone [https://github.com/rajesh-nitharwal/seo-keyword-cannibalization-detector.git](https://github.com/rajesh-nitharwal/seo-keyword-cannibalization-detector.git)
+cd seo-keyword-cannibalization-detector
+python3 -m venv venv
+source venv/bin/activate
+pip install -e .

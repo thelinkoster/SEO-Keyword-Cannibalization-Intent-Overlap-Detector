@@ -1,0 +1,42 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "seo-keyword-cannibalization-detector"
+version = "0.1.0"
+description = "Lightweight Python CLI tool to detect SEO keyword cannibalization, intent overlap, and generate canonicalization fixes."
+readme = "README.md"
+authors = [
+    { name = "Rajesh Kumar Nitharwal", email = "contact@linkoster.com" }
+]
+license = { file = "LICENSE" }
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Topic :: Internet :: WWW/HTTP :: Indexing/Search",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12"
+]
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0"
+]
+
+[project.scripts]
+seo-cannibalization-detector = "seo_cannibalization_detector.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/rajesh-nitharwal/seo-keyword-cannibalization-detector"
+Documentation = "https://github.com/rajesh-nitharwal/seo-keyword-cannibalization-detector#readme"
+Issues = "https://github.com/rajesh-nitharwal/seo-keyword-cannibalization-detector/issues"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
